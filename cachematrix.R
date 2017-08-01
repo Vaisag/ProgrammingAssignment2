@@ -1,8 +1,13 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Functions below will help us find out the inverse of a matrix
+## Once we find the inverse, it will be stored in the cache and if the matrix is
+## not changed the next time we call the function, it will retrieve the result from the cache
 
-## Write a short comment describing this function
 
+##makeCacheMatrix function will create a special vector which is a list containing function to
+##1. Set a matrix
+##2. Get the matrix
+##3. Set the inverse of the matrix 
+##4. Get the inverse of the matrix
 makeCacheMatrix <- function(x = matrix()) {
   inverse <- NULL
   
@@ -33,13 +38,11 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve will take in two arguments, xx and yy
+##xx is list from MakeCAcheMatrix function
+##yy is a square matrix
 
-cacheSolve <- function(xx, yy, ...) {
-  ## Return a matrix that is the inverse of 'xx'
-  ##yy is matrix
-  ##xx is list from MakeCAcheMatrix function
-  
+cacheSolve <- function(xx, yy, ...) { 
   y <- xx$getInverse()
   
   
